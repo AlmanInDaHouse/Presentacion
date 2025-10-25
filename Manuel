@@ -1,0 +1,101 @@
+import { useEffect } from "react";
+import "./styles.css";
+
+export default function App() {
+  // Scroll suave para anclas
+  useEffect(() => {
+    document.documentElement.style.scrollBehavior = "smooth";
+  }, []);
+
+  return (
+    <>
+      <nav className="nav">
+        <a href="#inicio" className="logo">TuNombre</a>
+        <div className="links">
+          <a href="#sobre-mi">Sobre mí</a>
+          <a href="#habilidades">Habilidades</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#contacto" className="btn">Contacto</a>
+        </div>
+      </nav>
+
+      <header id="inicio" className="hero">
+        <div className="hero-text">
+          <h1>Desarrollador <span className="grad">Backend</span></h1>
+          <p>Especializado en integración de IA, automatización y optimización.</p>
+          <div className="cta">
+            <a href="#proyectos" className="btn">Ver proyectos</a>
+            <a href="#contacto" className="btn ghost">Contactar</a>
+          </div>
+        </div>
+        <div className="hero-card">
+          {/* Aquí puedes poner tu foto o una tarjeta */}
+          <img src="/profile.jpg" alt="Tu foto" />
+        </div>
+      </header>
+
+      <section id="sobre-mi" className="section">
+        <h2>Acerca de mí</h2>
+        <p>
+          Soy desarrollador de software con foco en IA aplicada, eficiencia operativa y
+          desarrollo multiplataforma. He logrado mejoras de productividad (+35%), etc.
+        </p>
+        <div className="cards">
+          <article>
+            <h3>Competencias clave</h3>
+            <ul>
+              <li>Spring Boot / Java – React</li>
+              <li>PostgreSQL / MongoDB (SQL + NoSQL)</li>
+              <li>Automatización con IA</li>
+              <li>Diseño funcional y UX</li>
+              <li>Ciberseguridad aplicada al software</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Lo que aporto</h3>
+            <p>
+              Creatividad técnica + mentalidad analítica para convertir ideas en soluciones
+              seguras, escalables y eficientes.
+            </p>
+          </article>
+          <article>
+            <h3>Misión y futuro</h3>
+            <p>
+              Construir tecnología fiable con IA y ciberseguridad, aprendiendo y evolucionando con equipos de alto nivel.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="habilidades" className="ticker">
+        <div className="track">
+          <span>SPRING BOOT ✦ REACT ✦ SQL ✦ NOSQL ✦ HTML5 ✦ CSS3 ✦ GIT ✦ GITHUB ✦ DOCKER ✦ AWS ✦ AZURE</span>
+          <span>SPRING BOOT ✦ REACT ✦ SQL ✦ NOSQL ✦ HTML5 ✦ CSS3 ✦ GIT ✦ GITHUB ✦ DOCKER ✦ AWS ✦ AZURE</span>
+        </div>
+      </section>
+
+      <section id="proyectos" className="section">
+        <h2>Proyectos</h2>
+        <div className="grid">
+          {/* Repite Card de proyecto */}
+          <article className="card">
+            <h3>CyberGuard IA</h3>
+            <p>Plataforma de ciberseguridad con IA (FastAPI, PostgreSQL, React).</p>
+            <div className="meta">
+              <span>React</span><span>FastAPI</span><span>PostgreSQL</span>
+            </div>
+            <a className="btn small" href="https://github.com/tu-usuario/tu-repo" target="_blank">Código</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="contacto" className="contact">
+        <h2>¿Quieres contactarme?</h2>
+        <a className="email" href="mailto:tucorreo@gmail.com">tucorreo@gmail.com</a>
+        <a className="btn phone" href="tel:+34600000000">Llámame +34 600 00 00 00</a>
+      </section>
+
+      <footer className="footer">© {new Date().getFullYear()} Tu Nombre</footer>
+    </>
+  );
+}
